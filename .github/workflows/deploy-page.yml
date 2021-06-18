@@ -3,7 +3,7 @@ name: Build and deploy Jekyll site to github pages
 on:
   push:
     branches:
-      - master
+      - compilers
 
 jobs:
   github-pages:
@@ -17,3 +17,4 @@ jobs:
           jekyll_src: ./
           gem_src: ./
           target_branch: 'gh-pages'
+          token: ${{ secrets.GITHUB_TOKEN }}
